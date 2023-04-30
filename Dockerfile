@@ -1,5 +1,5 @@
 # Set the base image
-FROM debian:buster-slim
+FROM debian:latest
 
 # Install dependencies
 RUN apt-get update && \
