@@ -1,0 +1,50 @@
+# Architecture (amd64 or i386)
+ARCHITECTURE="amd64"
+
+# Debian Live flavor (none)
+LIVE_FLAVOR="none"
+
+# Language packs (comma-separated list)
+LIVE_PACKAGES="locales-all, language-pack-en"
+
+# Additional packages (comma-separated list)
+LIVE_PACKAGES_EXTRA="vim, htop, git"
+
+# Include firmware (true or false)
+LIVE_INCLUDE_FIRMWARE="true"
+
+# Enable persistence (true or false)
+LIVE_ENABLE_PERSISTENCE="true"
+
+# Persistence volume label (if persistence is enabled)
+LIVE_PERSISTENCE_LABEL="mydata"
+
+# Custom preseed file (optional)
+# LIVE_PRESEED="my-preseed.cfg"
+
+# Custom boot parameters (optional)
+# LIVE_BOOT_PARAMETERS="boot=casper noprompt"
+
+# Custom post-install script (optional)
+# LIVE_POST_INSTALL_SCRIPT="my-post-install.sh"
+
+# Custom isolinux splash screen (optional)
+# LIVE_ISOLINUX_SPLASH="my-splash.png"
+
+# Additional kernel command line options (optional)
+# LIVE_KERNEL_COMMAND_LINE="quiet splash"
+
+# Custom syslinux configuration file (optional)
+# LIVE_SYSLINUX_CFG="my-syslinux.cfg"
+
+# Set username (required)
+LIVE_USERNAME="myuser"
+
+# Set hostname (required)
+LIVE_HOSTNAME="myhostname"
+
+# Set password (required)
+LIVE_PASSWORD="mypassword"
+
+# Set root password (required)
+LIVE_ROOT_PASSWORD="myrootpassword"
