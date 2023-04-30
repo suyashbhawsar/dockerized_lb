@@ -1,3 +1,6 @@
+# Mirror
+LIVE_MIRROR="ftp.us.debian.org"
+
 # Architecture (amd64 or i386)
 ARCHITECTURE="amd64"
 
