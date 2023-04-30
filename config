@@ -1,0 +1,64 @@
+# Debian Live build configuration file
+#
+# See live-build(7) for details and examples.
+# See also /usr/share/doc/live-manual/examples/
+# for more examples and documentation.
+#
+# For a list of included packages, see:
+# https://salsa.debian.org/live-team/live-config/raw/master/config/package-lists/
+#
+# For a list of available hooks, see:
+# /usr/share/live/build/hooklist
+#
+# To build a UEFI-compatible image, add the following option:
+ --bootloader grub-efi
+
+# Set the distribution codename
+DISTRIBUTION buster
+
+# Set the target architecture
+ARCHITECTURE amd64
+
+# Set the output format to ISO hybrid image
+LB_FORMAT iso-hybrid
+
+# Set the mirror to use
+LB_MIRROR_BOOTSTRAP http://deb.debian.org/debian
+LB_MIRROR_CHROOT http://deb.debian.org/debian
+
+# Set the packages to include in the image
+# You can add additional packages to this list
+# or remove packages that you don't need.
+lb_chroot_packages="linux-image-amd64 live-boot live-config systemd-sysv"
+
+# Set the packages to install on the target system
+# when the image is installed.
+# You can add additional packages to this list
+# or remove packages that you don't need.
+#lb_binary_packages="openssh-server"
+
+# Set the hostname for the image
+lb_config --hostname mydebian
+
+# Set the time zone for the image
+lb_config --timezone America/New_York
+
+# Set the language for the image
+lb_config --debian-installer language=en --debian-installer country=US
+
+# Set the user password
+#lb_config --user-password 1234567890
+
+# Set the root password
+#lb_config --root-password 1234567890
+
+# Set the default desktop environment
+#lb config --debian-installer live-desktop=xfce
+
+# Add custom hooks to customize the image
+# You can add additional hooks to this list
+# or remove hooks that you don't need.
+lb_hooks="base apt"
+
+# Set the output filename for the image
+LB_OUTPUT=/mnt/output/Debian_custom.iso
