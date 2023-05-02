@@ -11,3 +11,6 @@ VOLUME /mnt/output
 ARG CACHEBUST=1
 RUN git clone https://github.com/suyashbhawsar/dockerized_lb.git /opt/dockerized_lb
 WORKDIR /opt/dockerized_lb
+RUN lb config
+
+CMD ["lb", "build"]
