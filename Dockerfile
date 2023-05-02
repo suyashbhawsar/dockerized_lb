@@ -11,4 +11,5 @@ VOLUME /mnt/output
 # Set the working directory to a temporary directory
 WORKDIR /opt/dockerized_lb
 
+ARG CACHEBUST=1
 RUN git clone https://github.com/suyashbhawsar/dockerized_lb.git .
