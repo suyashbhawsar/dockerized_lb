@@ -10,7 +10,7 @@ VOLUME /mnt/output
 
 RUN cd /opt
 ARG CACHEBUST=1
-RUN git clone https://github.com/suyashbhawsar/dockerized_lb.git .
+RUN git clone https://github.com/suyashbhawsar/dockerized_lb.git
 
 # Set the working directory to a temporary directory
 WORKDIR /opt/dockerized_lb
