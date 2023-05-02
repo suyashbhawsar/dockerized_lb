@@ -8,8 +8,7 @@ RUN apt-get update && \
 # Mount the output directory as a Docker volume
 VOLUME /mnt/output
 
-RUN cd /opt
-RUN git clone https://github.com/suyashbhawsar/dockerized_lb.git
-
 # Set the working directory to a temporary directory
 WORKDIR /opt/dockerized_lb
+
+RUN git clone https://github.com/suyashbhawsar/dockerized_lb.git .
