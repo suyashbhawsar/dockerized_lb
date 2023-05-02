@@ -9,5 +9,5 @@ RUN apt-get update && \
 VOLUME /mnt/output
 
 ARG CACHEBUST=1
-RUN git clone https://github.com/suyashbhawsar/dockerized_lb.git /opt/dockerized_lb
-RUN cd /opt/dockerized_lb
+RUN git clone https://github.com/suyashbhawsar/dockerized_lb.git /opt/dockerized_lb && \
+    cd /opt/dockerized_lb
