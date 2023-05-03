@@ -13,4 +13,5 @@ RUN git clone https://github.com/suyashbhawsar/dockerized_lb.git /opt/dockerized
 WORKDIR /opt/dockerized_lb
 RUN lb config
 
-CMD ["lb", "build"]; ["cp", "/opt/dockerized_lb/live-image-amd64.hybrid.iso", "/mnt/output"]
+#CMD ["lb", "build"]; ["cp", "/opt/dockerized_lb/live-image-amd64.hybrid.iso", "/mnt/output"]
+CMD /bin/bash -c "lb build && rm -rf !(live-image-amd64.hybrid.iso|myconfig)"
